@@ -1,0 +1,17 @@
+section.cards.section
+   
+    .cards__content.list-content
+        h2.cards__title.title=title
+        header.cards__header
+                form.form-item
+                    label(for="slc") Сортировать по:
+                    select(id="slc")
+                        option цена 1
+                        option цена 2
+                        option цена 3
+                
+        ul.cards__list
+            - var n = 0;
+            while n < 10
+                li(data-id=n++)
+                    include ./cardItem.pug

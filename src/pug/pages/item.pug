@@ -1,0 +1,62 @@
+extends ../default.pug
+block variables
+    - title = 'item'
+block mainContent
+    section.tea-item__presentation
+        .tea-item__slider
+            .tea-item__slider-inner
+                .tea-item__slider-item
+                    img(src='images/item1-1.jpg')
+                .tea-item__slider-item
+                    img(src='images/item1-2.jpg')
+                .tea-item__slider-item
+                    img(src='images/item1-1.jpg')
+                .tea-item__slider-item
+                    img(src='images/item1-2.jpg')
+            .tea-item__slider-mini.slider-mini
+                .slider-mini__item
+                    img(src='images/item1-1.jpg')
+                .slider-mini__item
+                    img(src='images/item1-2.jpg')
+                .slider-mini__item
+                    img(src='images/item1-1.jpg')
+                .slider-mini__item
+                    img(src='images/item1-2.jpg')
+        article.tea-item__article
+            h4.tea-item__title.title Да хун пао
+            p.tea-item__price 10р/1гр
+            p.tea-item__text
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                | minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo
+                | consequat.
+            button.btn.tea-item__btn.form-item(type='button')
+                +svg('plus')(width='30' height='30' fill="#fff") 
+                | в корзину
+        .tea-item__tab
+            ul.tab-tea__names
+                li.tab-tea__names-item
+                    button.tab-tea__btn.active(type='button' data-class='content-tab__item--1') Описание товара
+                li.tab-tea__names-item
+                    button.tab-tea__btn(type='button' data-class='content-tab__item--2') Рекомендации
+                li.tab-tea__names-item.tab-tea__names-item--review
+                    button.tab-tea__btn(type='button' data-class='content-tab__item--3')
+                        | Отзывы
+                        span  (1)
+            .tab-tea__content.content-tab
+                p.content-tab__item.content-tab__item--1.active
+                        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+                        | quibusdam
+                        | officia eum rerum fugit, at recusandae dolorem modi maiores aperiam.
+                        | Laudantium, dolorem facilis architecto fugiat tempora distinctio odit magni
+                        | suscipit?
+                        | Est commodi, quas sit beatae officiis quam qui labore autem quis natus,
+                        | quidem
+                        | eos sapiente iusto iure expedita a alias fuga error? Incidunt deserunt
+                        | nulla
+                        | impedit reiciendis quia natus mollitia?
+                p.content-tab__item.content-tab__item--2
+                        | Как варить
+                p.content-tab__item.content-tab__item--3
+                        | отзывы
+    include ../sections/sliderItems.pug

@@ -1,0 +1,9 @@
+- var content = [{title:'Еще один ебсполезный текс! Еще один ебсполезный текс! Еще один ебсполезный текс!',text:'One more useless text!One more useless text! One more useless text!One more useless text! One more useless text!One more useless text!One more useless text! One more useless text!',img:'2.png'},{title:'Еще один ебсполезный текс!',text:'One more useless text!',img:'1.jpg'},{title:'Еще один ебсполезный текс!',text:'One more useless text!',img:'3.jpg'}]
+article.main-slider
+    each val in content
+        .main-slider__item
+            img.main-slider__img(src=`images/${val.img}`)
+            .main-slider__content
+                h3.main-slider__item-title.title=val.title
+                p.main-slider__item-text.text=val.text
+                a.main-slider__item-btn.btn.form-item(href='#') Узнать больше

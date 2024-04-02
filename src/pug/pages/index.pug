@@ -1,0 +1,19 @@
+extends ../default.pug
+block variables
+    - title = 'самое любимое'
+block banners
+    include ../sections/choseBox.pug
+block sideContent
+    include ../sections/categories.pug
+    include ../sections/filtr.pug
+block topContent 
+    include ../sections/sliderItems.pug
+    include ../sections/sliderEvents.pug
+block mainContent 
+    include ../components/list.pug
+block bottomContent
+    include ../sections/info.pug
+   	
+
+
+

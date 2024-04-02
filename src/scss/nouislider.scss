@@ -1,0 +1,30 @@
+#slider-round {
+    height: 10px;
+}
+
+#slider-round .noUi-connect {
+    background: $red;
+}
+
+#slider-round .noUi-handle {
+    height: 18px;
+    width: 18px;
+    top: -5px;
+    right: -9px; /* half the width */
+    border-radius: 9px;
+    &:After,&:before{
+        content:none
+    }
+}
+.noUi-horizontal .noUi-tooltip{
+    bottom: auto;
+    padding: 0;
+    border:none;
+    // display: none;
+    top: 110%;
+}
+// .noUi-state-drag{
+//    & .noUi-horizontal .noUi-tooltip{
+//         display: block;
+//     }
+// }

@@ -1,0 +1,26 @@
+section.side-content__categories
+  h3.side-content__categories-title.side-content__title.title
+    | Категории
+  ul.side-content__categories-menu.categories-list.categories-list__desktop
+    each val in ['Чай сбора 2021','Подарочные наборы','Зеленый чай','Красный чай']
+      li.categories-list__item
+        a.side-content__categories-link(href='')=val
+        .side-content__dblside.dblside
+          h4.side-content__title.title=val
+          ul
+            - for (var i = 0; i < 10; ++i) {
+              li
+                a.dblside-link(href='')=i        
+            - }
+  .mobile-categories__wrapper
+    ul.side-content__categories-menu.categories-list.categories-list__mobile
+      each val in ['Чай сбора 2021','Подарочные наборы','Зеленый чай','Красный чай']
+        li.categories-list__item
+          a.side-content__categories-link(href='')=val
+          .side-content__dblside.dblside
+          
+            ul
+              - for (var i = 0; i < 5; ++i) {
+                li
+                  a.dblside-link(href='')=i        
+              - }

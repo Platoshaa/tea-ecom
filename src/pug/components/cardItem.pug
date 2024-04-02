@@ -1,0 +1,23 @@
+include ../helpers/mixins.pug
+article.card-item
+    a.card-item__link(href="item.html")
+        .card-item__img(href='item.html')
+            span.card-item__icon.icon-block
+                span.icon-item.icon-block__fresh
+                    +svg('card-icon2')(width='16' height='16')
+                    span.icon-block__text Новый привоз
+                span.icon-item.icon-block__popular
+                    +svg('card-icon2')(width='16' height='16')
+                    span.icon-block__text Хит продаж
+                span.icon-item.icon-block__recomended
+                    +svg('card-icon2')(width='16' height='16')
+                    span.icon-block__text Выбор экспертов
+            img.card-item__img-content.card-item__img-content--1(height='200' src='images/item1.jpg' alt='')
+            img.card-item__img-content.card-item__img-content--2(height='200' src='images/item1-1.jpg' alt='')
+        .cards-item__article(href='item.html')
+            h3.cards-item__title Шу пуэр "Черный журавль"
+            p.cards-item__text
+                | Немного описания
+            p.cards-item__price 1000р/100гр
+    button.form-item.btn.card-item__btn(type='button')
+        +svg('plus')(width='28' height='28' fill="#Fff")|Добавить

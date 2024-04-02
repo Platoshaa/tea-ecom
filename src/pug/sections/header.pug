@@ -1,0 +1,79 @@
+header.header
+	.header-top
+		ul.header-top__inner.container
+			li
+				a.header-top__link.header-top__location.pl(href="#location")
+					+svg('location')(width='20' height='20')
+					span.header-top__location-text Иваново
+			li
+				a.header-top__link.header-top__user.pl(href="#login")
+					+svg('user')(width='20' height='20')
+					span.header-top__user-text Войти/Регистрация  
+			li
+				a.header-top__link.header-top__cart(href="cart.html")
+					+svg('cart')(width='28' height='28' )
+					span.header-top__cart-text
+						span.header-top__cart-text--1
+							| Товаров в
+							| корзине:
+						span.header-top__cart-text--2 0
+			button.header-top__burger
+							span
+							span
+							span
+
+
+	.header-main
+		.header-main__mobile
+			nav.mobile-menu
+				ul.header__list.header__list--mobile
+					li.header__list-item
+						a.header__list-link.header__list-link--mobile(href="tea.html") чай
+						- var n = 0;
+						ul.header__subcolumn
+							while n < 9
+								li
+									a(href='tea.html')= n++
+					li.header__list-item
+						a.header__list-link.header__list-link--mobile(href="tea.html") посуда
+						- var n = 0;
+						ul.header__subcolumn
+							while n < 6
+								li
+									a(href='tea.html')= n++
+					li.header__list-item
+						a.header__list-link.header__list-link--mobile(href="tea.html") сувениры
+		.header-main__inner.container
+			a(href="index.html" class="header__logo logo")
+				+svg('logo')(width='240' height='50' fill='#303030' )
+			h1.header-main__text Интернет-магазин высококачественного и свежего чая
+			form.header-main__form
+				input(type="text" class="input form-item" placeholder="Что вас интересует?")
+				button(class="header-main__btn btn form-item" type="submit")
+					+svg('search')(width='20' height='20')
+			.header-main__contacts
+				a(href="tel:+78123187850" class="header__phone")|+7 (812) 318-78-50
+				a(href="mailto:info@tea.ru" class="header__mail")|mailto:info@tea.ru
+				span.header__scedule Пн-Пт 10:00 -18:00
+	nav.header__menu
+		ul.header__list.container
+			li.header__list-item
+				a.header__list-link.header__list-link--desktop(href="tea.html") чай
+				- var n = 0;
+				ul.header__subcolumn.header__subcolumn--desktop
+					while n < 9
+						li
+							a(href='tea.html')= n++
+			li.header__list-item
+				a.header__list-link.header__list-link--desktop(href="tea.html") посуда
+				- var n = 0;
+				ul.header__subcolumn.header__subcolumn--desktop
+					while n < 6
+						li
+							a(href='tea.html')= n++
+			li.header__list-item
+				a.header__list-link.header__list-link--desktop(href="tea.html") сувениры
+	
+	include ../components/breadcrums.pug
+
+	

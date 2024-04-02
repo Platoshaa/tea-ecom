@@ -1,0 +1,9 @@
+extends ../default.pug
+block variables
+    - title = 'название категории'
+block sideContent
+    include ../sections/categories.pug
+    include ../sections/filtr.pug
+block mainContent
+    include ../components/list.pug
+

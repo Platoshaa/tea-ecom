@@ -1,0 +1,20 @@
+extends ../default.pug
+block variables
+    - title = 'Корзина'
+block sideContent
+    include ../sections/categories.pug
+block mainContent
+    section.cart
+        h2.cart__title.title Корзина
+        .cart__content
+            ul.cart__list
+                - var n = 0;
+                while n < 2
+                    li(data-id=n++)
+                        include ../components/itemCart.pug
+            form(action="")
+                .cart__price Итого: 
+                    span.cart__price 2000 
+                    | руб
+                button.form-item.btn.card-item__btn Оформить
+    include ../sections/sliderItems.pug

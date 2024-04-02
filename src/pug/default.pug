@@ -1,0 +1,47 @@
+include ./helpers/mixins.pug
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="format-detection" content="telephone=no")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+		link(rel="stylesheet" href="css/style.css")
+		link(rel="shortcut icon" href="img/favicon.ico")
+		title #{title?'Чай - '+title:'Чай выручай'}
+	body
+		a.skip-link(href='#m')
+			| Перейти к контенту
+		.loader.active
+		a.scrollup(href='#')
+			+svg('up')(width='16' height='16' fill="#fff")
+		.wrapper
+			
+			include ./sections/header.pug
+			
+			block banners
+			.container1.wrapper-content
+
+				aside.side
+					.side__wrapper
+						button.btn.side-mobile |||
+						block sideContent
+							include ./sections/categories.pug
+
+				main.main#m
+					
+
+
+
+					block topContent
+					block mainContent
+					include ./components/popups.pug
+			block bottomContent 	
+			include ./sections/footer.pug
+		.sakura
+		
+		script(type="module" src="./js/script.min.js" ) 
+	block scripts
+	
+				

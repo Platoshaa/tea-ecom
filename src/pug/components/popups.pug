@@ -1,0 +1,23 @@
+.popup-location.popup
+		.popup-table.table
+			.cell
+				.popup-content
+					h3.popup__title Выберите свой город
+					form.popup-form.form(action='#')
+						.form-input
+							select.input(autocomplete='off'  name='имя' placeholder='Ваш город')
+								option Иваново
+								option Кинешма
+							
+.popup-login.popup
+	.popup-table.table
+		.cell
+			.popup-content
+				.popup__title Войти
+				form.popup-form.form(action='#')
+					.form-input
+						input.input(autocomplete='off' type='text' name='имя' placeholder='Ваш e-mail')
+					.form-input
+						input.input(autocomplete='off' type='password' name='имя' placeholder='Ваш пароль')
+				button.btn.form-item Войти
+				a(href='#') Зарегестрировать нового пользователя
